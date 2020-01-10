@@ -8,4 +8,9 @@ class Volunteer
     @id = attributes.fetch(:id)
   end
 
+  def ==(volunteer_to_compare)
+  end
+
+
+    
 end
