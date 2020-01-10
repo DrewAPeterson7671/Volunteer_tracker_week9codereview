@@ -29,10 +29,10 @@ describe Project do
     end
   end
 
-  # context '.all' do
-  #   it 'is empty to start' do
-  #     expect(Project.all).to eq []
-  #   end
+  context '.all' do
+    it 'is empty to start' do
+      expect(Project.all).to eq []
+    end
 
   #   it 'returns all projects' do
   #     project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
@@ -90,14 +90,5 @@ describe Project do
   #     expect(Project.all).to eq []
   #   end
   # end
-
-  describe '.get_project' do
-    it 'should return a value from the database' do
-      project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-      project1.save
-      result = project2.get_albums('SELECT * FROM projects;')
-      expect(result.first().fetch('title')).to eq('Teaching Kids to Code1')
-    end
-  end
 
 end

@@ -27,6 +27,9 @@ class Project
     projects
   end
 
+  def self.all
+    self.get_albums('SELECT * FROM project;')
+  end
 
   # def self.all
   #   self.
