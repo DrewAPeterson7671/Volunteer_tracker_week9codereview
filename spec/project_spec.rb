@@ -95,9 +95,8 @@ describe Project do
     it 'should return a value from the database' do
       project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
       project1.save
-      project2 = Project.new({:title => 'MORE Teaching Kids to Code', :id => nil})
-      project2.save
-      expect(project1 == project2).to eq true
+      result = project2.get_albums('SELECT * FROM projects;')
+      expect(result.first().fetch('title')).to eq('Teaching Kids to Code1')
     end
   end
 
