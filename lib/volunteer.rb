@@ -21,7 +21,7 @@ class Volunteer
       project_id = volunteer.fetch('project_id').to_i
       volunteers.push(Song.new({:name => name, :id => id, :project_id => project_id}))
     end
-    volunteer
+    volunteers
   end
 
   def self.all
