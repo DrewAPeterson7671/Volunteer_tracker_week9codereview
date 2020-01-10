@@ -1,5 +1,5 @@
 class Project
-  attr_accessor :title1
+  attr_accessor :title
   attr_reader :id
 
   def initialize(attributes)
