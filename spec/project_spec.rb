@@ -28,12 +28,12 @@ describe Project do
       expect(project1 == project2).to eq true
     end
   end
-  #
+
   # context '.all' do
   #   it 'is empty to start' do
   #     expect(Project.all).to eq []
   #   end
-  #
+
   #   it 'returns all projects' do
   #     project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
   #     project1.save
@@ -90,4 +90,15 @@ describe Project do
   #     expect(Project.all).to eq []
   #   end
   # end
+
+  describe '.get_project' do
+    it 'should return a value from the database' do
+      project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      project1.save
+      project2 = Project.new({:title => 'MORE Teaching Kids to Code', :id => nil})
+      project2.save
+      expect(project1 == project2).to eq true
+    end
+  end
+
 end

@@ -16,6 +16,15 @@ class Project
     self.title() == project_to_compare.title()
   end
 
+  def self.get
+
+  end
+
+
+  # def self.all
+  #   self.
+  #
+  # end
 
 
 end
