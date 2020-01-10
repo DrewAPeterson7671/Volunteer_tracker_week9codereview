@@ -13,7 +13,7 @@ get('/') do
 end
 
 get('/projects') do
-  @projects = Project
+  @projects = Project.all
   erb(:projects)
 end
 
@@ -29,7 +29,7 @@ get ('/projects/new') do
 end
 
 post ('/projects') do
-  title = params[:project_name]
+  title = params[:project_title]
   project = Project.new({:title => title, :id => nil})
   project.save()
   redirect to('/projects')
