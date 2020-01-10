@@ -25,7 +25,7 @@ class Volunteer
   end
 
   def self.all
-    self.get_volunteers('SELECT')
+    self.get_volunteers('SELECT * FROM volunteers;')
   end
 
   def save
