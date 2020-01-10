@@ -12,6 +12,20 @@ class Volunteer
     (self.name() == volunteer_to_compare.name()) && (self.project_id() == volunteer_to_compare.project_id())
   end
 
+  def self.get_volunteers(db_query)
+    returned_volunteers = DB.exec(db_query)
+    volunteers = []
+    returned_volunteers.each() do |volunteer|
+      name = volunteer.fetch('name')
+      id = volunteer.fetch('id').to_i
+      project_id = volunteer.fetch('project_id').to_i
+      volunteers.push(Song.new({:name => name, :id => id, :project_id => project_id}))
+    end
+    volunteer
+  end
 
+  def self.all
+    self.get_volunteers('SELECT * FROM volunteers;')
+  end
 
 end
