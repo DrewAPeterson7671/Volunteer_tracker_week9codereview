@@ -13,7 +13,7 @@ get('/') do
 end
 
 get('/projects') do
-  @projects = Project.sort
+  @projects = Project
   erb(:projects)
 end
 
