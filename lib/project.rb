@@ -38,9 +38,9 @@ class Project
     Project.new({:title => title, :id => id})
   end
 
-  # def volunteers
+  def volunteers
   #   Volunteer.find_by_project(self.id)
-  # end
+  end
 
 
   def update(title_update)
