@@ -31,10 +31,6 @@ class Project
     self.get_projects('SELECT * FROM projects;')
   end
 
-  # def self.all
-  #   self.
-  #
-  # end
 
 
 end
