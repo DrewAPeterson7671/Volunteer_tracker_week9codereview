@@ -4,7 +4,7 @@ class Project
 
   def initialize(attributes)
     @title = attributes.fetch(:title)
-    @id = attributes.fetch(:id1)
+    @id = attributes.fetch(:id)
   end
 
 
