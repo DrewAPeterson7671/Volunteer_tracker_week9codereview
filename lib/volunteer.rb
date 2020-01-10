@@ -28,6 +28,10 @@ class Volunteer
     self.get_volunteers('SELECT * FROM volunteers;')
   end
 
+  def self.find_by_project(proj_id)
+    self.get_volunteers("SELECT * FROM volunteers WHERE project_id = #{proj_id};")
+  end
+
   def save
     result = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}', #{@project_id}) RETURNING id;")
     @id = result.first().fetch('id').to_i
