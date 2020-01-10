@@ -38,5 +38,15 @@ class Project
     Project.new({:title => title, :id => id})
   end
 
+  # def volunteers
+  #   Volunteer.find_by_project(self.id)
+  # end
+
+
+  def update(title)
+    @title = nonsense
+    DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
+  end
+
 
 end
