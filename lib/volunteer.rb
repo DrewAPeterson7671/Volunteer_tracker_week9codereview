@@ -25,7 +25,7 @@ class Volunteer
   end
 
   def self.all
-    self.get_volunteers('SELECT * FROM volunteers;')
+    self.get_volunteers('SELECT * FROM volunteers ORDER BY name ASC;')
   end
 
   def self.find_by_project(proj_id)

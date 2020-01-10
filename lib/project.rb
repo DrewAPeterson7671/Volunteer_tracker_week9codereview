@@ -28,7 +28,7 @@ class Project
   end
 
   def self.all
-    self.get_projects('SELECT * FROM projects;')
+    self.get_projects('SELECT * FROM projects ORDER BY title ASC;')
   end
 
   def self.find(id)
