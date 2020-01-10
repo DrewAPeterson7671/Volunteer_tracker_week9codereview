@@ -9,8 +9,9 @@ class Volunteer
   end
 
   def ==(volunteer_to_compare)
+    (self.name() == volunteer_to_compare.name()) && (self.project_id() == volunteer_to_compare.project_id())
   end
 
 
-    
+
 end
