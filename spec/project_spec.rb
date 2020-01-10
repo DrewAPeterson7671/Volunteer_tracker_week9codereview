@@ -41,7 +41,7 @@ describe Project do
   #     project2.save
   #     expect(Project.all).to eq [project1, project2]
   #   end
-  # end
+  end
   #
   # describe '#save' do
   #   it 'saves a project to the database' do

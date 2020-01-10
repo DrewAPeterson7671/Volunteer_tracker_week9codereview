@@ -28,7 +28,7 @@ class Project
   end
 
   def self.all
-    self.get_albums('SELECT * FROM project;')
+    self.get_projects('SELECT * FROM projects;')
   end
 
   # def self.all
