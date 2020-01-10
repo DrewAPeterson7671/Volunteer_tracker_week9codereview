@@ -4,12 +4,9 @@ class Project
 
   def initialize(attributes)
     @title = attributes.fetch(:title)
-    @id = attributes.fetch(:id)
+    @id = attributes.fetch(:id1)
   end
 
-  # def self.title
-  #   return "fail"
-  # end
 
 
 
