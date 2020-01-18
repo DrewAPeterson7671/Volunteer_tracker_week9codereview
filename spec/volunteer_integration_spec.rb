@@ -90,7 +90,7 @@ describe 'the volunteer delete path', {:type => :feature} do
     test_volunteer.save
     visit "/projects/#{project_id}"
     click_link('Mr Meseeks')
-    click_button('Delete volunteer1')
+    click_button('Delete volunteer11')
     expect(page).not_to have_content('Mr Meseeks')
   end
 end
